@@ -234,6 +234,51 @@ svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stro
 
 .pill.wait{color:#ffe9a8;background:rgba(255,196,0,.14);border-color:rgba(255,196,0,.45)}
 .pill.wait:before{background:#ffc400;box-shadow:0 0 8px #ffc400}
+
+/* ===== selo verificado ===== */
+.vb{width:1.15em;height:1.15em;flex:none;margin-left:5px;vertical-align:-.2em;filter:drop-shadow(0 0 4px rgba(45,160,255,.95)) drop-shadow(0 0 11px rgba(29,155,255,.75));animation:vbg 2.4s ease-in-out infinite}
+@keyframes vbg{50%{filter:drop-shadow(0 0 8px #8fd0ff) drop-shadow(0 0 20px #1d9bff);transform:scale(1.1)}}
+
+/* ===== NOTIFICAÇÕES (liquid glass) ===== */
+#notifs{background:radial-gradient(100% 38% at 50% 0%,rgba(45,160,255,.36),transparent 70%),radial-gradient(70% 30% at 100% 85%,rgba(22,184,212,.18),transparent 70%)}
+.bell{position:relative}.bell svg{animation:bring 4.5s ease-in-out infinite;transform-origin:50% 18%}
+.bdg{position:absolute;top:-3px;right:-3px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:linear-gradient(180deg,#ff7b7b,#d62f2f);font-style:normal;font-size:.64rem;font-weight:800;display:grid;place-items:center;border:1.5px solid #050f24;box-shadow:0 0 12px rgba(255,93,93,.85);animation:bdp 1.6s ease-in-out infinite}
+@keyframes bdp{50%{transform:scale(1.2)}}
+@keyframes bring{0%,86%,100%{transform:rotate(0)}89%{transform:rotate(16deg)}92%{transform:rotate(-14deg)}95%{transform:rotate(9deg)}98%{transform:rotate(-4deg)}}
+.nhero{display:flex;align-items:center;gap:16px;padding:16px;margin-bottom:14px}
+.nhero b{display:block;font-size:1.1rem}.nhero small{display:block;color:var(--s);font-size:.78rem;margin-top:3px;line-height:1.35}
+.bellbig{position:relative;width:62px;height:62px;border-radius:22px;display:grid;place-items:center;flex:none;background:linear-gradient(180deg,rgba(90,175,255,.98),rgba(7,101,220,.92));border:1px solid rgba(255,255,255,.4);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.6),var(--glow)}
+.bellbig svg{width:30px;height:30px;animation:bring 3s ease-in-out infinite;transform-origin:50% 18%}
+.bellbig s{position:absolute;inset:0;border-radius:22px;border:2px solid rgba(45,160,255,.65);animation:sonar 2.6s ease-out infinite}.bellbig s+s{animation-delay:1.3s}
+@keyframes sonar{to{transform:scale(1.75);opacity:0}}
+.nc{display:flex;gap:12px;padding:14px 14px 14px 16px;position:relative;overflow:hidden}
+.nc:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:3px;background:var(--b2);box-shadow:0 0 12px var(--b2)}
+.nc.t-importante:before{background:#ffc400;box-shadow:0 0 12px #ffc400}.nc.t-urgente:before{background:#ff5d5d;box-shadow:0 0 12px #ff5d5d}
+.nc.new{border-color:rgba(160,210,255,.75);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.6),var(--glow),0 12px 32px rgba(0,10,40,.42)}
+.nc.new:after{content:"NOVA";position:absolute;bottom:12px;right:12px;font-size:.56rem;font-weight:800;letter-spacing:.12em;padding:3px 8px;border-radius:10px;background:linear-gradient(180deg,#2b95ff,#0765dc);box-shadow:var(--glow)}
+.na{position:relative;width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,#0877F9,#2da0ff);border:2px solid rgba(160,210,255,.75);box-shadow:0 0 16px rgba(45,160,255,.6);overflow:hidden}
+.na img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.nb{flex:1;min-width:0}.nh{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.nn{font-size:.92rem;display:flex;align-items:center;min-width:0;overflow:hidden;white-space:nowrap}.nh small{color:var(--m);font-size:.68rem;flex:none}
+.tg{display:inline-block;margin-top:6px;font-size:.58rem;font-weight:800;letter-spacing:.12em;padding:3px 9px;border-radius:10px;color:#bfe3ff;background:rgba(45,160,255,.16);border:1px solid rgba(45,160,255,.45)}
+.t-importante .tg{color:#ffe29a;background:rgba(255,196,0,.14);border-color:rgba(255,196,0,.5)}.t-urgente .tg{color:#ffc4c4;background:rgba(255,93,93,.15);border-color:rgba(255,93,93,.5)}
+.nb strong{display:block;margin:6px 0 2px;font-size:.98rem}.nb p{color:var(--s);font-size:.86rem;line-height:1.45;white-space:pre-wrap;word-break:break-word;margin-top:4px;padding-right:34px}
+.nempty{padding:34px 18px;text-align:center}.nempty b{display:block;font-size:1.05rem;margin-bottom:6px}.nempty p{color:var(--s);font-size:.85rem}
+
+/* ===== coração / apuração ===== */
+.hw{position:relative;width:120px;height:120px;display:grid;place-items:center;margin:6px auto 0}
+.heart{width:84px;height:84px;fill:#ff3b5c;stroke:#ffb3c1;stroke-width:.5;filter:drop-shadow(0 0 16px rgba(255,59,92,.9));animation:hb var(--hb,1.15s) ease-in-out infinite;transform-origin:50% 55%;position:relative;z-index:1}
+@keyframes hb{0%,100%{transform:scale(1)}14%{transform:scale(1.22)}28%{transform:scale(1.02)}42%{transform:scale(1.15)}70%{transform:scale(1)}}
+.hw i{position:absolute;inset:14px;border-radius:50%;border:2px solid rgba(255,59,92,.6);animation:rg var(--hb,1.15s) ease-out infinite}.hw i.r2{animation-delay:calc(var(--hb,1.15s)/2)}
+@keyframes rg{from{transform:scale(.7);opacity:.9}to{transform:scale(1.7);opacity:0}}
+.apu{text-align:center;--hb:1.15s}.apu.hot .heart{filter:drop-shadow(0 0 26px rgba(255,59,92,1)) drop-shadow(0 0 40px rgba(255,120,140,.8))}
+.bpm{margin-top:2px}.bpm b{font-size:2.4rem;font-weight:800;color:#ff6b86;text-shadow:0 0 18px rgba(255,59,92,.7);font-variant-numeric:tabular-nums}.bpm small{margin-left:6px;color:var(--s);font-weight:700;letter-spacing:.14em}
+.at{font-size:1.35rem;font-weight:800;margin-top:6px}.as{color:var(--s);font-size:.85rem;margin:4px 0 16px}
+.ap{margin-bottom:16px}.apb{height:10px;border-radius:10px;background:rgba(255,255,255,.12);overflow:hidden}.apb i{display:block;height:100%;width:0;border-radius:10px;background:linear-gradient(90deg,#ff3b5c,#ff9bb0);box-shadow:0 0 14px rgba(255,59,92,.8);transition:width .5s linear}
+.apl{display:flex;justify-content:space-between;font-size:.78rem;color:var(--s);margin-top:7px}.app{color:#fff}
+.apu .box{text-align:left}.apu .rr .t i{animation:none}
+.lockbox{padding:28px 20px;text-align:center}.lockbox h3{font-size:1.25rem;margin:10px 0 8px}.lockbox p{color:var(--s);font-size:.88rem;line-height:1.5}
+#champ .apb i{background:linear-gradient(90deg,#ffb800,#ffe27a);box-shadow:0 0 14px rgba(255,190,0,.8)}
 </style>
 </head>
 <body>
@@ -257,17 +302,16 @@ svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stro
  <section class="scr nonav" id="done"></section>
  <section class="scr" id="results"></section>
  <section class="scr nonav" id="champ"></section>
+ <section class="scr nonav" id="notifs"></section>
  <section class="scr" id="profile"></section>
 
  <nav id="tabs"></nav><div class="toast" id="toast"></div>
 </div>
 <script type="module">
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
-import {getFirestore,collection,doc,getDoc,onSnapshot,query,orderBy,writeBatch,runTransaction,increment,serverTimestamp} from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
+import {getFirestore,collection,doc,getDoc,onSnapshot,query,orderBy,limit,writeBatch,runTransaction,increment,serverTimestamp} from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
 // ====== CHAVE DO FIREBASE DESTA PÁGINA (página dos eleitores) ======
-// Console do Firebase > Configurações do projeto > Seus aplicativos > Web > firebaseConfig
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDKZzipPHbi5EaSLT-5Red-xtdaEWokegI",
   authDomain: "biblioteca-f186d.firebaseapp.com",
@@ -289,7 +333,7 @@ const GR=[['#1f6fd1','#0a2f66'],['#2aa3e8','#0b3a70'],['#4a7be8','#112a66'],['#1
 const LOGO='https://i.ibb.co/5hDT1ZMH/logo.webp';
 
 let C=[];                      // candidatos (vêm do Firestore em tempo real)
-const st={dig:'',sel:null,code:null,name:'',voted:false,status:'carregando',ready:false,filter:'',q:'',cur:'splash',prev:'home',det:null};
+const st={avisos:[],seen:(()=>{try{return+localStorage.getItem('votoazul_seen')||0}catch(e){return 0}})(),prevSeen:0,nf:'todas',encAt:0,avOk:false,dig:'',sel:null,code:null,name:'',voted:false,status:'carregando',ready:false,filter:'',q:'',cur:'splash',prev:'home',det:null};
 
 const num=c=>'Nº '+String(c.numero||0).padStart(2,'0');
 const votos=c=>c.votos||0;
@@ -305,6 +349,49 @@ const first=()=>(st.name||'').trim().split(/\s+/)[0]||'eleitor';
 const ini=()=>`<div class="av nm" style="background:linear-gradient(135deg,#0877F9,#2da0ff)">${esc(first()[0]||'?').toUpperCase()}</div>`;
 
 const CROWN='<svg class="i crown" viewBox="0 0 24 24"><path d="M3 19h18M4 17 3 7l5 4 4-6 4 6 5-4-1 10z"/></svg>';
+
+const VB='<svg class="vb" viewBox="0 0 24 24"><polygon points="12.00,1.00 13.81,2.88 16.21,1.84 17.17,4.27 19.78,4.22 19.73,6.83 22.16,7.79 21.12,10.19 23.00,12.00 21.12,13.81 22.16,16.21 19.73,17.17 19.78,19.78 17.17,19.73 16.21,22.16 13.81,21.12 12.00,23.00 10.19,21.12 7.79,22.16 6.83,19.73 4.22,19.78 4.27,17.17 1.84,16.21 2.88,13.81 1.00,12.00 2.88,10.19 1.84,7.79 4.27,6.83 4.22,4.22 6.83,4.27 7.79,1.84 10.19,2.88" fill="#1d9bff" stroke="#1d9bff" stroke-width="1.4" stroke-linejoin="round"/><path d="m7.7 12.4 3 3 5.7-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const HEART='<svg class="heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
+const ms=a=>(a.criadoEm&&a.criadoEm.toMillis?a.criadoEm.toMillis():Date.now());
+const ago=t=>{const s=Math.max(0,(Date.now()-t)/1000);if(s<45)return 'agora';if(s<3600)return 'há '+Math.round(s/60)+' min';if(s<86400)return 'há '+Math.round(s/3600)+' h';const d=Math.round(s/86400);return d===1?'ontem':'há '+d+' dias'};
+const unread=()=>st.avisos.filter(a=>ms(a)>st.seen).length;
+const TLB={info:'AVISO',importante:'IMPORTANTE',urgente:'URGENTE'};
+const avt=(n,f)=>`<div class="na"><span>${esc((n||'?')[0]).toUpperCase()}</span>${f?`<img src="${esc(f)}" alt="" referrerpolicy="no-referrer" onerror="this.remove()">`:''}</div>`;
+
+// ===== apuração com o coração acelerando =====
+const APU_MS=150000; // 2min30 (aumente para deixar mais lento)
+// relógio do servidor: todo mundo conta o tempo a partir do MESMO instante em que o fiscal encerrou
+let srvOff=0;
+(async()=>{try{const t0=Date.now(),r=await fetch(location.href.split('#')[0],{method:'HEAD',cache:'no-store'}),d=r.headers.get('date');if(d){const t1=Date.now();srvOff=new Date(d).getTime()-(t0+t1)/2}}catch(e){}})();
+const nowS=()=>Date.now()+srvOff;
+const apuProg=()=>{if(!enc())return 0;if(!st.encAt)return 1;return Math.max(0,Math.min(1,(nowS()-st.encAt)/APU_MS))};
+const apurando=()=>enc()&&total()>0&&apuProg()<1;
+function apuSeq(){
+ const seq=[];C.forEach(c=>{for(let i=0;i<votos(c);i++)seq.push(c.id)});
+ let a=(seq.length*2654435761)>>>0;C.forEach(c=>{a=(Math.imul(a^((c.numero||0)*40503+votos(c)*97),2246822519))>>>0});
+ const rnd=()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+ for(let i=seq.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[seq[i],seq[j]]=[seq[j],seq[i]]}
+ return seq}
+const apuHTML=()=>`<div class="apu"><div class="hw">${HEART}<i class="r1"></i><i class="r2"></i></div>
+ <div class="bpm"><b class="bv">60</b><small>BPM</small></div>
+ <div class="at">Apurando os votos...</div><div class="as">A cada voto aberto, o coração acelera.</div>
+ <div class="ap"><div class="apb"><i></i></div><div class="apl"><span class="apc">0 votos apurados</span><b class="app">0%</b></div></div>
+ <div class="glass box ab">${C.map(c=>`<div class="rr" data-id="${c.id}"><div class="l"><span>${esc(c.nome)} <small style="color:var(--s)">(${num(c)})</small></span><b class="vv">0</b></div><div class="t"><i style="width:0"></i></div></div>`).join('')}</div></div>`;
+function apuUpd(){
+ const el=document.querySelector('.scr.on .apu');if(!el)return;
+ const p=apuProg();
+ if(p>=1){const sc=$(st.cur);R[st.cur]();sc.classList.add('fresh');[...sc.children].forEach((c,i)=>c.style.setProperty('--i',i));setTimeout(()=>sc.classList.remove('fresh'),2000);return}
+ const seq=apuSeq(),k=Math.floor(p*seq.length),cnt={};
+ for(let i=0;i<k;i++)cnt[seq[i]]=(cnt[seq[i]]||0)+1;
+ el.querySelectorAll('.rr').forEach(r=>{const n=cnt[r.dataset.id]||0;r.querySelector('.vv').textContent=n;r.querySelector('.t i').style.width=(seq.length?n/seq.length*100:0)+'%'});
+ el.querySelector('.apb i').style.width=(p*100)+'%';
+ el.querySelector('.app').textContent=Math.floor(p*100)+'%';
+ el.querySelector('.apc').textContent=k+' de '+seq.length+' votos apurados';
+ const hb=(1.15-0.81*Math.pow(p,1.2));el.style.setProperty('--hb',hb.toFixed(2)+'s');
+ el.querySelector('.bv').textContent=Math.round(60/hb);
+ el.classList.toggle('hot',p>.8);
+ el.querySelector('.at').textContent=p<.34?'Apurando os votos...':p<.67?'O coração acelera...':p<.9?'Falta pouco...':'Última urna!';
+}
 const TABS=[['home','Início','home'],['cands','Candidatos','users'],['vote','Votar','shield'],['results','Resultados','chart'],['profile','Perfil','user']];
 function show(id){
  document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));
@@ -327,7 +414,7 @@ const back=()=>go(st.prev||'home');
 const R={
 home(){const n=C.length;
  const act=enc()?'Ver o eleito':naoIni()?'Aguardando o início':st.voted?`Ver meu voto`:'Participar da votação';
- $('home').innerHTML=`<div class="hd"><img src="${LOGO}" alt=""><span><b>BIBLIOTECA</b>Professora Socorro Amorim</span><div class="ib" style="position:relative">${ic('bell')}</div>${ini()}</div>
+ $('home').innerHTML=`<div class="hd"><img src="${LOGO}" alt=""><span><b>BIBLIOTECA</b>Professora Socorro Amorim</span><div class="ib bell" onclick="go('notifs')">${ic('bell')}${unread()?`<i class="bdg">${Math.min(unread(),9)}${unread()>9?'+':''}</i>`:''}</div>${ini()}</div>
 <div class="hello"><h2>Olá, ${esc(first())}!</h2><p>Sua participação faz toda a diferença!</p></div>
 <div class="glass hero"><span class="pill ${stCls()}">${stTxt()}</span><h1>Sua voz escolhe o futuro.</h1><p>Participe da eleição do próximo Monitor-Chefe da nossa biblioteca.</p><button class="btn" onclick="${enc()?`go('champ')`:naoIni()?`toast('A eleição ainda não começou')`:st.voted?`go('done')`:`go('vote')`}">${act} ${ic('arrow')}</button></div>
 <div class="stats"><div class="glass stat">${ic('users')}<b>${n}</b><small>Candidatos</small></div><div class="glass stat">${ic('shield')}<b>1</b><small>Voto por aluno</small></div><div class="glass stat">${ic('chart')}<b>${total()}</b><small>Votos até agora</small></div></div>
@@ -355,6 +442,9 @@ confirm(){const c=C.find(x=>x.id===st.sel);if(!c)return go('vote');
 done(){$('done').innerHTML=`<div class="cen" style="margin:auto 0"><div class="ok">${ic('check')}</div><h2>Voto registrado<br>com sucesso!</h2><p class="sub">Obrigado por participar da escolha do próximo Monitor-Chefe.</p><div class="glass box" style="margin:22px 0 18px;text-align:left"><b style="color:var(--ok)">Voto confirmado</b><p class="sub" style="font-size:.82rem;margin-top:4px">Seu voto foi registrado de forma segura e anônima.</p></div><button class="btn ghost" style="margin:0" onclick="go('home')">Voltar para o início</button><em>“Grandes mudanças começam com pequenas atitudes.”<br>Biblioteca Professora Socorro Amorim</em></div>`},
 
 results(){
+ const topo=`<div class="top"><div class="ib" onclick="go('home')">${ic('back')}</div><h2>Resultados</h2></div>`;
+ if(!enc()){$('results').innerHTML=topo+`<div class="glass lockbox"><div class="hw" style="--hb:2.6s">${HEART}<i class="r1"></i><i class="r2"></i></div><h3>Resultado em sigilo</h3><p>${naoIni()?'A votação ainda não começou.':'A votação está em andamento.'} Os votos só serão apurados quando ela for encerrada. Aí o coração começa a acelerar e o resultado aparece aos poucos, até o eleito ser revelado.</p></div>`;return}
+ if(apurando()){$('results').innerHTML=topo+apuHTML();setTimeout(apuUpd,0);return}
  const tot=total();let acc=0;const cols=['#2da0ff','#0877F9','#1a56a8','#5f86b8','#16b8d4','#7aa7d9'];
  const grad=tot?C.map((c,i)=>{const s=acc;acc+=votos(c)/tot*100;return`${cols[i%cols.length]} ${s}% ${acc}%`}).join(','):'#17386b 0% 100%';
  $('results').innerHTML=`<div class="top"><div class="ib" onclick="go('home')">${ic('back')}</div><h2>Resultados</h2></div>
@@ -371,6 +461,7 @@ champ(){
  const fim=`<button class="btn ghost gbtn" onclick="go('home')">Voltar para o início</button>`;
  let corpo;
  if(!st.ready)corpo='<p class="empty">Carregando...</p>';
+ else if(apurando()){corpo=apuHTML();setTimeout(apuUpd,0)}
  else if(!tot||!top.length)corpo=`<div class="gh">${CROWN}<div class="gl">ELEIÇÃO ENCERRADA</div></div><p class="empty">Nenhum voto foi registrado.</p>`;
  else if(top.length>1)corpo=`<div class="gh">${CROWN}<div class="gl">EMPATE</div><div class="gs">${top.length} candidatos com ${max} voto${max===1?'':'s'} cada</div></div><div class="gtie">${top.map(c=>`<div>${photo(c)}<b>${esc(c.nome)}</b><small>${num(c)}</small></div>`).join('')}</div>${lista}`;
  else{const c=top[0],p=Math.round(max/tot*100);
@@ -381,6 +472,19 @@ champ(){
   <div class="gs">Parabéns! Escolhido(a) pelos alunos da Biblioteca Professora Socorro Amorim.</div>${lista}`}
  $('champ').innerHTML=corpo+fim;
  if(st.ready&&top.length===1&&!st._cb){st._cb=1;setTimeout(()=>burst(1),400);setTimeout(()=>burst(1),1300);setTimeout(()=>burst(1),2400)}},
+
+notifs(){
+ const L=st.avisos,f=st.nf;
+ if(st.cur!=='notifs')st.prevSeen=st.seen;
+ const mx=Math.max(st.seen,...L.map(ms));if(mx>st.seen){st.seen=mx;try{localStorage.setItem('votoazul_seen',String(mx))}catch(e){}}
+ const T=a=>a.tipo||'info',cnt=t=>L.filter(a=>T(a)===t).length;
+ const lista=L.filter(a=>f==='todas'||T(a)===f);
+ const card=a=>{const t=T(a),nova=ms(a)>st.prevSeen;return`<div class="glass nc t-${t} ${nova?'new':''}">${avt(a.fiscalNome,a.fiscalFoto)}<div class="nb"><div class="nh"><b class="nn">${esc(a.fiscalNome||'Fiscal')}${a.verificado?VB:''}</b><small>${ago(ms(a))}</small></div><span class="tg">${TLB[t]||'AVISO'}</span>${a.titulo?`<strong>${esc(a.titulo)}</strong>`:''}<p>${esc(a.texto)}</p></div></div>`};
+ const chips=[['todas','Todas',L.length],['info','Avisos',cnt('info')],['importante','Importantes',cnt('importante')],['urgente','Urgentes',cnt('urgente')]];
+ $('notifs').innerHTML=`<div class="top"><div class="ib" onclick="go('home')">${ic('back')}</div><h2>Notificações</h2></div>
+ <div class="glass nhero"><div class="bellbig">${ic('bell')}<s></s><s></s></div><div><b>${L.length?L.length+' mensagem'+(L.length===1?'':'ns')+' da equipe':'Tudo em dia'}</b><small>Avisos oficiais dos fiscais da Biblioteca Professora Socorro Amorim</small></div></div>
+ <div class="chips">${chips.map(([k,t,n])=>`<button class="chip ${f===k?'on':''}" onclick="st.nf='${k}';R.notifs()">${t} · ${n}</button>`).join('')}</div>
+ <div class="cl">${lista.map(card).join('')||`<div class="glass nempty"><div class="bellbig" style="margin:0 auto 12px">${ic('bell')}<s></s><s></s></div><b>Nenhuma notificação por enquanto</b><p>Quando a equipe de fiscais mandar um aviso, ele aparece aqui.</p></div>`}</div>`},
 
 profile(){$('profile').innerHTML=`<div class="top"><h2>Perfil</h2></div><div class="pf"><div class="av" style="margin:auto;background:linear-gradient(135deg,#0877F9,#2da0ff);display:grid;place-items:center"><svg class="i" viewBox="0 0 24 24" style="width:44px;height:44px">${P.user}</svg></div><h2>${esc(st.name||'Eleitor')}</h2><p class="sub">Código: ${esc(st.code||'')}</p></div>
  <div class="glass box" style="display:flex;gap:12px;align-items:center"><span style="color:${st.voted?'var(--ok)':'var(--s)'}">${ic(st.voted?'check':'info')}</span><div><small class="sub">Participação na eleição</small><br><b>${st.voted?'Voto registrado':'Voto pendente'}</b></div></div>
@@ -483,14 +587,21 @@ function refresh(){
  if(id==='champ'){if(!enc())return go('home');return R.champ()}
  if(id==='detail'){const c=C.find(x=>x.id===st.det);return c?renderDetail(c):go('cands')}
  if(id==='confirm'&&!C.find(x=>x.id===st.sel))return go('vote');
- if(['home','cands','vote','results','profile'].includes(id)&&R[id]){if(id==='vote'){if(st.voted||!aberta())return go('vote');return urnaUpd()}R[id]()}
+ if(['home','cands','vote','results','profile','notifs'].includes(id)&&R[id]){if(id==='vote'){if(st.voted||!aberta())return go('vote');return urnaUpd()}R[id]()}
 }
 function listen(){
  onSnapshot(query(collection(db,'candidatos'),orderBy('numero')),snap=>{
   C=snap.docs.map(d=>({id:d.id,...d.data()}));st.ready=true;
   if(st.sel&&!C.find(c=>c.id===st.sel))st.sel=null;refresh();
  },e=>{console.error(e);st.ready=true;toast('Erro ao carregar candidatos')});
- onSnapshot(doc(db,'config','eleicao'),s=>{const was=st.status;st.status=s.exists()&&s.data().status?s.data().status:'aguardando';
+ onSnapshot(query(collection(db,'avisos'),orderBy('criadoEm','desc'),limit(50)),snap=>{
+  const primeiro=!st.avOk;st.avOk=true;
+  const novos=primeiro?[]:snap.docChanges().filter(c=>c.type==='added').map(c=>c.doc.data());
+  st.avisos=snap.docs.map(d=>({id:d.id,...d.data()}));
+  if(st.code&&novos.length&&st.cur!=='notifs'){toast('Nova notificação de '+(novos[0].fiscalNome||'um fiscal'));beep(900,.12)}
+  refresh();
+ },e=>console.error(e));
+ onSnapshot(doc(db,'config','eleicao'),s=>{{const ev=s.exists()?s.data().encerradoEm:0;st.encAt=ev&&ev.toMillis?ev.toMillis():(+ev||0)}const was=st.status;st.status=s.exists()&&s.data().status?s.data().status:'aguardando';
   if(st.code&&was!==st.status){
    if(enc()&&!['splash','login','champ'].includes(st.cur)){toast('A votação foi encerrada!');return go('champ')}
    if(naoIni()&&['vote','confirm'].includes(st.cur)){toast('A votação ainda não começou');return go('home')}
@@ -510,6 +621,7 @@ function cnt(sel){document.querySelectorAll(sel).forEach(e=>{const n=+e.textCont
 document.addEventListener('pointerdown',e=>{const t=e.target.closest('.btn,.cc,.chip,.mi');if(!t||t.disabled)return;const r=t.getBoundingClientRect(),s=Math.max(r.width,r.height)*2,d=document.createElement('span');d.className='rp';d.style.cssText=`width:${s}px;height:${s}px;left:${e.clientX-r.left-s/2}px;top:${e.clientY-r.top-s/2}px`;t.appendChild(d);setTimeout(()=>d.remove(),700)});
 
 // funções usadas pelos onclick do HTML
+setInterval(()=>{if(document.querySelector('.scr.on .apu'))apuUpd()},400);
 Object.assign(window,{go,R,burst,st,detail,send,toast,logout,back,kp,kc,kv});
 
 // início: splash -> (login automático se o código foi salvo) -> home
